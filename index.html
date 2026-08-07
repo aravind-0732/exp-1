@@ -1,105 +1,188 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: silver;
-            margin: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorful Portfolio</title>
 
-        header {
-            background-color: midnightblue;
-            color: cyan;
-            text-align: center;
-            padding: 20px;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-        .avatar {
-            width: 70px;
-            height: 70px;
-            background: white;
-            border-radius: 50%;
-            margin: 0 auto 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+body{
+    background:linear-gradient(135deg,#667eea,#764ba2,#ff6a88,#ffb347);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
+}
 
-        section {
-            background: rgb(195, 173, 155);
-            margin: 20px;
-            padding: 15px;
-            border-radius: 8px;
-        }
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 
-        h2 {
-            color: #0066cc;
-        }
+header{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    color:white;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
 
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+.avatar{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00dbde,#fc00ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 15px;
+    font-size:45px;
+    color:white;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+section{
+    width:85%;
+    max-width:900px;
+    margin:25px auto;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    border-radius:15px;
+    padding:25px;
+    color:white;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+h2{
+    color:#ffe600;
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin:10px 0;
+}
+
+button{
+    background:#ff4081;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff1744;
+    transform:scale(1.05);
+}
+
+footer{
+    background:rgba(0,0,0,.35);
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    section{
+        width:95%;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="avatar">
-        <svg width="45" height="45" viewBox="0 0 24 24" fill="#0066cc">
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-        </svg>
-    </div>
-    <h1>Aravindh S</h1>
-    <p>3rd year B.E-Computer Science And Engineering</p>
+
+<div class="avatar">👨‍💻</div>
+
+<h1>John Doe</h1>
+<p>Web Developer | UI Designer | Programmer</p>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Skills</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</nav>
+
 </header>
 
 <section>
-    <h2>About Me</h2>
-    <p>I am a Computer Science Engineering student interested in Frontend Development, UI/UX Design, and Web Applications.</p>
+<h2>About Me</h2>
+<p>
+Hello! I'm a passionate web developer who enjoys creating modern,
+responsive, and colorful websites using HTML, CSS, and JavaScript.
+</p>
 </section>
 
 <section>
-    <h2>My Services</h2>
-    <ul>
-        <li><b>Frontend Developer:</b> Building clean, responsive web pages.</li>
-        <li><b>UI/UX Design:</b> Creating intuitive user interfaces and layouts.</li>
-    </ul>
+<h2>Skills</h2>
+<ul>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+<li>Python</li>
+<li>React</li>
+</ul>
 </section>
 
 <section>
-    <h2>My Skills</h2>
-    <ul>
-        <li>HTML & CSS</li>
-        <li>UI/UX Design</li>
-        <li>C++</li>
-        <li>Python</li>
-    </ul>
+<h2>Projects</h2>
+<ul>
+<li>🌐 Portfolio Website</li>
+<li>🛒 E-Commerce Website</li>
+<li>📚 Student Management System</li>
+<li>🤖 AI Chat Application</li>
+</ul>
 </section>
 
 <section>
-    <h2> Featured Projects</h2>
-    <ul>
-        <li>Student PlacementTracker</li>
-        <li>Smart Monitoring System</li>
-        
-    </ul>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: aravindhcse007@gmail.com</p>
-    <p>Phone: +91 6369347321</p>
+<h2>Contact</h2>
+<p>Email: yourname@example.com</p>
+<p>Phone: +91 98765 43210</p>
+<br>
+<button>Contact Me</button>
 </section>
 
 <footer>
-    <p>© 2026 Aravindh S</p>
+© 2026 My Portfolio | Designed with ❤️
 </footer>
 
 </body>
