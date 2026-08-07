@@ -1,196 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aranidh | Portfolio</title>
+
+<title>Aranidh AI Portfolio</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:linear-gradient(-45deg,#6a11cb,#2575fc,#00c9ff,#92fe9d);
-    background-size:400% 400%;
-    animation:gradient 12s ease infinite;
+    background:#050816;
     color:white;
 }
 
-@keyframes gradient{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
+
+/* NAVBAR */
 
 header{
-    text-align:center;
-    padding:40px 20px;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
+
+    background:#0f172a;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+
 }
 
-.avatar{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:white;
-    color:#2575fc;
-    font-size:55px;
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    box-shadow:0 8px 20px rgba(0,0,0,.3);
-}
-
-header h1{
-    margin-top:15px;
-    font-size:42px;
-}
-
-header p{
-    margin-top:10px;
-    font-size:20px;
-}
 
 nav{
-    margin-top:25px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
 }
+
+
+.logo{
+
+    font-size:30px;
+    font-weight:bold;
+    color:#38bdf8;
+
+}
+
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+
+}
+
+
+nav ul li{
+
+    margin-left:25px;
+
+}
+
 
 nav a{
+
     color:white;
     text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-    transition:.3s;
+
 }
+
 
 nav a:hover{
-    color:yellow;
+
+    color:#38bdf8;
+
 }
+
+
+
+/* HERO */
+
+.hero{
+
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 8%;
+
+}
+
+
+.hero-text{
+
+    width:50%;
+
+}
+
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+
+.hero span{
+
+    color:#38bdf8;
+
+}
+
+
+.hero p{
+
+    font-size:20px;
+    color:#cbd5e1;
+    margin:25px 0;
+
+}
+
+
+.btn{
+
+    background:#38bdf8;
+    color:#020617;
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+
+}
+
+
+.ai-box{
+
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:
+    radial-gradient(circle,#38bdf8,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:120px;
+    box-shadow:0 0 50px #38bdf8;
+
+    animation:float 3s infinite;
+
+}
+
+
+@keyframes float{
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+
+
+/* SECTIONS */
 
 section{
-    width:85%;
-    max-width:900px;
-    margin:30px auto;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(10px);
+
+    padding:70px 8%;
+
+}
+
+
+.title{
+
+    text-align:center;
+    color:#38bdf8;
+    font-size:40px;
+    margin-bottom:40px;
+
+}
+
+
+
+/* SKILLS */
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+}
+
+
+.card{
+
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid #1e293b;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #38bdf8;
+
+}
+
+
+.card h3{
+
+    color:#38bdf8;
+    margin:15px;
+
+}
+
+
+
+/* PROJECTS */
+
+.project{
+
+    background:#111827;
+    margin:20px 0;
     padding:25px;
     border-radius:15px;
+
 }
 
-h2{
-    color:#ffe600;
-    margin-bottom:15px;
+
+.project h3{
+
+    color:#a78bfa;
+
 }
 
-ul{
-    padding-left:20px;
+
+
+/* CONTACT */
+
+
+.contact{
+
+    text-align:center;
+
 }
 
-li{
-    margin:10px 0;
-}
 
-button{
-    background:#ff4081;
+.contact button{
+
+    margin-top:20px;
+    padding:15px 35px;
+    background:#7c3aed;
     color:white;
-    border:none;
-    padding:12px 25px;
+    border:0;
     border-radius:30px;
-    cursor:pointer;
-    font-size:16px;
+
 }
 
-button:hover{
-    background:#e91e63;
-}
+
+
+/* FOOTER */
+
 
 footer{
-    text-align:center;
+
+    background:#020617;
     padding:20px;
-    background:rgba(0,0,0,.3);
-    margin-top:30px;
+    text-align:center;
+    color:#94a3b8;
+
 }
 
-@media(max-width:768px){
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
 
-    section{
-        width:95%;
-    }
+
+@media(max-width:800px){
+
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+
 }
+
+
+.hero-text{
+
+width:100%;
+
+}
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+.ai-box{
+
+margin-top:40px;
+
+}
+
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+nav ul{
+
+display:none;
+
+}
+
+
+}
+
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
 
-<div class="avatar">A</div>
-
-<h1>Aranidh S</h1>
-<p>Web Developer | Student | Creative Designer</p>
-
 <nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Skills</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
+
+<div class="logo">
+Aranidh Spark
+</div>
+
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+
 </nav>
 
 </header>
 
-<section>
-<h2>About Me</h2>
+
+
+<section class="hero">
+
+
+<div class="hero-text">
+
+<h1>
+Hi, I'm <span>Aranidh</span><br>
+
+</h1>
+
+
 <p>
-Hello! I'm <strong>Aranidh</strong>, a passionate web developer who enjoys
-creating colorful, responsive, and user-friendly websites using HTML, CSS,
-and JavaScript.
+
+Creating intelligent applications,
+machine learning solutions,
+and futuristic web experiences.
+
 </p>
+
+
+<a class="btn" href="#">
+Explore My Work
+</a>
+
+
+</div>
+
+
+<div class="ai-box">
+
+
+
+</div>
+
+
 </section>
 
-<section>
-<h2>Skills</h2>
-<ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>JavaScript</li>
-<li>Python</li>
-<li>Responsive Web Design</li>
-</ul>
-</section>
+
+
 
 <section>
-<h2>Projects</h2>
-<ul>
-<li>🌐 Personal Portfolio</li>
-<li>🛒Student Placement Tracker</li>
-<li>📚 Student Management System</li>
-<li>🤖 AI Chatbot</li>
-</ul>
+
+<h2 class="title">
+My Skills
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Frontend Developer</h3>
+
+<p>
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>UI/UX Designer</h3>
+
+<p>
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Data Science</h3>
+
+<p>
+
+</p>
+
+</div>
+
+
+</div>
+
 </section>
 
+
+
+
 <section>
-<h2>Contact</h2>
-<p>📧 aravindh@example.com</p>
-<p>📱 +91 98765 43210</p>
-<br>
-<button>Contact Me</button>
+
+
+<h2 class="title">
+Featured Projects
+</h2>
+
+
+<div class="project">
+
+<h3>Student Placement Tracker</h3>
+
+<p>
+
+</p>
+
+</div>
+
+
+
+<div class="project">
+
+<h3> Smart Mointoring System</h3>
+
+<p>
+
+</p>
+
+</div>
+
+
+
+<div class="project">
+
+<h3>Hostel Management System</h3>
+
+<p>
+
+</p>
+
+</div>
+
+
 </section>
+
+
+
+
+<section class="contact">
+
+<h2 class="title">
+Contact Me
+</h2>
+
+<p>
+Email: aravindh007@gmail.com
+</p>
+
+
+<button>
+Hire Me
+</button>
+
+
+</section>
+
+
+
 
 <footer>
-© 2026 Aranidh | All Rights Reserved
+
+© 2026 Aranidh AI Portfolio | Built with HTML & CSS
+
 </footer>
+
 
 </body>
 </html>
